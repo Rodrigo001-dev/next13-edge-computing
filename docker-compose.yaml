@@ -1,0 +1,15 @@
+version: '3'
+services:
+  database:
+    image: postgres:15
+    container_name: database-next13-with-drizzle
+    ports:
+      - 5433:5432
+    env_file:
+      - .env
+    restart: always
+    volumes:
+      - postgres:/var/lib/postgresql/data
+
+volumes:
+  postgres:

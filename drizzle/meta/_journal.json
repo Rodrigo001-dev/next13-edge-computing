@@ -1,0 +1,13 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1689984488684,
+      "tag": "0000_complex_fabian_cortez",
+      "breakpoints": true
+    }
+  ]
+}
