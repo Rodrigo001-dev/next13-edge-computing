@@ -1,11 +1,11 @@
 {
   "version": "5",
   "dialect": "pg",
-  "id": "7a3c93a3-1b74-4cfa-8246-7ac6bc0b9150",
+  "id": "6ee19de2-c391-4335-81dc-aed52b0ae46d",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
-    "user": {
-      "name": "user",
+    "users": {
+      "name": "users",
       "schema": "",
       "columns": {
         "id": {

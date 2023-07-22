@@ -1,14 +1,11 @@
-import { drizzle } from 'drizzle-orm/node-postgres'
-import { Client } from 'pg'
+import { neon, neonConfig } from '@neondatabase/serverless'
+import { drizzle } from 'drizzle-orm/neon-http'
+import { z } from 'zod'
 
-const client = new Client({
-  host: '0.0.0.0',
-  port: 5433,
-  user: 'next13-drizzle',
-  password: 'secret',
-  database: 'database-next13-with-drizzle',
-})
+neonConfig.fetchConnectionCache = true
 
-await client.connect()
+const databaseUrl = z.string().url().parse(process.env.DATABASE_URL)
 
-export const db = drizzle(client)
+const sql = neon(databaseUrl)
+
+export const db = drizzle(sql)
